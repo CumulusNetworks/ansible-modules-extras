@@ -69,7 +69,7 @@ def hash_existing_ports_conf(module):
 
     try:
         existing_ports_conf = open(PORTS_CONF).readlines()
-    except IOError as error_msg:
+    except IOError, error_msg:
         _msg = "Failed to open %s: %s" % (PORTS_CONF, error_msg)
         module.fail_json(msg=_msg)
         return # for testing only should return on module.fail_json
@@ -128,7 +128,7 @@ def make_copy_of_orig_ports_conf(module):
 
     try:
         shutil.copyfile(PORTS_CONF, PORTS_CONF + '.orig')
-    except IOError as error_msg:
+    except IOError, error_msg:
         _msg = "Failed to save the original %s: %s" % (PORTS_CONF, error_msg)
         module.fail_json(msg=_msg)
         return  # for testing only
@@ -142,16 +142,17 @@ def write_to_ports_conf(module):
     """
     temp = tempfile.NamedTemporaryFile()
     try:
-        temp.write('# Managed By Ansible\n')
-        for k in sorted(module.ports_conf_hash.keys()):
-            port_setting = module.ports_conf_hash[k]
-            _str = "%s=%s\n" % (k, port_setting)
-            temp.write(_str)
-        temp.seek(0)
-        shutil.copyfile(temp.name, PORTS_CONF)
-    except IOError as error_msg:
-        module.fail_json(
-            msg="Failed to write to %s: %s" % (PORTS_CONF, error_msg))
+        try:
+            temp.write('# Managed By Ansible\n')
+            for k in sorted(module.ports_conf_hash.keys()):
+                port_setting = module.ports_conf_hash[k]
+                _str = "%s=%s\n" % (k, port_setting)
+                temp.write(_str)
+            temp.seek(0)
+            shutil.copyfile(temp.name, PORTS_CONF)
+        except IOError, error_msg:
+            module.fail_json(
+                msg="Failed to write to %s: %s" % (PORTS_CONF, error_msg))
     finally:
         temp.close()
 
