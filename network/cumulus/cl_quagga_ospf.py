@@ -18,7 +18,7 @@
 DOCUMENTATION = '''
 ---
 module: cl_quagga_ospf
-author: "Cumulus Networks (ce-ceng@cumulusnetworks.com)"
+author: "Cumulus Networks (@CumulusNetworks)"
 short_description: Configure basic OSPFv2 parameters and interfaces using Quagga
 description:
     - Configures basic OSPFv2 global parameters such as

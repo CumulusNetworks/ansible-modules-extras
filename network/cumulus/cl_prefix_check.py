@@ -18,7 +18,7 @@
 DOCUMENTATION = '''
 ---
 module: cl_prefix_check
-author: "Cumulus Networks (ce-ceng@cumulusnetworks.com)"
+author: "Cumulus Networks (@CumulusNetworks)"
 short_description: Check to see if route/prefix exists
 description:
     - Check to see if a route exists. This module can be used simply to check a

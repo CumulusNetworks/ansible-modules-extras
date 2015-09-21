@@ -18,7 +18,7 @@
 DOCUMENTATION = '''
 ---
 module: cl_quagga_protocol
-author: "Cumulus Networks (ce-ceng@cumulusnetworks.com)"
+author: "Cumulus Networks (@CumulusNetworks)"
 short_description: Enable routing protocol services via Quagga
 description:
     - Enable Quagga services available on Cumulus Linux. This includes OSPF
