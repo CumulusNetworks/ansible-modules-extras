@@ -18,7 +18,7 @@
 DOCUMENTATION = '''
 ---
 module: cl_ports
-author: "Cumulus Networks (ce-ceng@cumulusnetworks.com)"
+author: "Cumulus Networks (@CumulusNetworks)"
 short_description: Configure Cumulus Switch port attributes (ports.conf)
 description:
     - Set the initial port attribute defined in the Cumulus Linux ports.conf,
