@@ -18,7 +18,7 @@
 DOCUMENTATION = '''
 ---
 module: cl_interface_policy
-author: "Cumulus Networks (ce-ceng@cumulusnetworks.com)"
+author: "Cumulus Networks (@CumulusNetworks)"
 short_description: Configure interface enforcement policy on Cumulus Linux
 description:
     - This module affects the configuration files located in the interfaces
