@@ -18,7 +18,7 @@
 DOCUMENTATION = '''
 ---
 module: cl_bridge
-author: "Cumulus Networks (ce-ceng@cumulusnetworks.com)"
+author: "Cumulus Networks (@CumulusNetworks)"
 short_description: Configures a bridge port on Cumulus Linux
 description:
     - Configures a bridge interface on Cumulus Linux To configure a bond port
@@ -84,7 +84,7 @@ options:
             - /etc/network/interfaces.d
 
 
-requirements: [ Alternate Debian network interface manager - \
+requirements: [ Alternate Debian network interface manager
 ifupdown2 @ github.com/CumulusNetworks/ifupdown2 ]
 notes:
     - because the module writes the interface directory location. Ensure that
