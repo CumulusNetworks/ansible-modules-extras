@@ -18,7 +18,7 @@
 DOCUMENTATION = '''
 ---
 module: cl_bond
-author: "Cumulus Networks (ce-ceng@cumulusnetworks.com)"
+author: "Cumulus Networks (@CumulusNetworks)"
 short_description: Configures a bond port on Cumulus Linux
 description:
     - Configures a bond interface on Cumulus Linux To configure a bridge port
