@@ -18,7 +18,7 @@
 DOCUMENTATION = '''
 ---
 module: cl_license
-author: "Cumulus Networks (ce-ceng@cumulusnetworks.com)"
+author: "Cumulus Networks (@CumulusNetworks)"
 short_description: Install Cumulus Linux license
 description:
     - Installs a Cumulus Linux license. The module reports no change of status
