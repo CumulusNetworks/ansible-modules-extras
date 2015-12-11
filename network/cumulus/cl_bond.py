@@ -18,6 +18,7 @@
 DOCUMENTATION = '''
 ---
 module: cl_bond
+version_added: "2.0"
 author: "Cumulus Networks (@CumulusNetworks)"
 short_description: Configures a bond port on Cumulus Linux
 description:
@@ -122,7 +123,6 @@ options:
         default:
             - /etc/network/interfaces.d
 
-
 requirements:  [ Alternate Debian network interface manager - \
 ifupdown2 @ github.com/CumulusNetworks/ifupdown2 ]
 notes:
@@ -175,6 +175,19 @@ cl_bonds:
     bond2:
         vids: [1, 50]
         clag_id: 1
+'''
+
+RETURN = '''
+changed:
+    description: whether the interface was changed
+    returned: changed
+    type: bool
+    sample: True
+msg:
+    description: human-readable report of success or failure
+    returned: always
+    type: string
+    sample: "interface bond0 config updated"
 '''
 
 
