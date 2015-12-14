@@ -18,7 +18,7 @@
 DOCUMENTATION = '''
 ---
 module: cl_bond
-version_added: "2.0"
+version_added: "2.1"
 author: "Cumulus Networks (@CumulusNetworks)"
 short_description: Configures a bond port on Cumulus Linux
 description:
