@@ -18,6 +18,7 @@
 DOCUMENTATION = '''
 ---
 module: cl_img_install
+version_added: "2.1"
 author: "Cumulus Networks (@CumulusLinux)"
 short_description: Install a different Cumulus Linux version.
 description:
@@ -81,6 +82,19 @@ Example playbook entries using the cl_img_install module
 
     - name: install image and switch slots. only reboot needed
       cl_img_install: version=2.0.1 src=/root/image.bin switch_slot=yes'
+'''
+
+RETURN = '''
+changed:
+    description: whether the interface was changed
+    returned: changed
+    type: bool
+    sample: True
+msg:
+    description: human-readable report of success or failure
+    returned: always
+    type: string
+    sample: "interface bond0 config updated"
 '''
 
 
