@@ -18,6 +18,7 @@
 DOCUMENTATION = '''
 ---
 module: cl_interface_policy
+version_added: "2.1"
 author: "Cumulus Networks (@CumulusNetworks)"
 short_description: Configure interface enforcement policy on Cumulus Linux
 description:
@@ -41,6 +42,7 @@ options:
             - folder to store interface files.
         default: '/etc/network/interfaces.d/'
 '''
+
 EXAMPLES = '''
 Example playbook entries using the cl_interface_policy module.
 
@@ -48,6 +50,19 @@ Example playbook entries using the cl_interface_policy module.
       cl_interface_policy:
           allowed: "lo eth0 swp1-9, swp11, swp12-13s0, swp12-30s1, swp12-30s2, bond0-12"
 
+'''
+
+RETURN = '''
+changed:
+    description: whether the interface was changed
+    returned: changed
+    type: bool
+    sample: True
+msg:
+    description: human-readable report of success or failure
+    returned: always
+    type: string
+    sample: "interface bond0 config updated"
 '''
 
 
