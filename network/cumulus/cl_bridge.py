@@ -18,6 +18,7 @@
 DOCUMENTATION = '''
 ---
 module: cl_bridge
+version_added: "2.1"
 author: "Cumulus Networks (@CumulusNetworks)"
 short_description: Configures a bridge port on Cumulus Linux
 description:
@@ -132,6 +133,19 @@ cl_bridge:
         ports: ['swp1', 'swp3']
         vlan_aware: true
         vids: ['1-100']
+'''
+
+RETURN = '''
+changed:
+    description: whether the interface was changed
+    returned: changed
+    type: bool
+    sample: True
+msg:
+    description: human-readable report of success or failure
+    returned: always
+    type: string
+    sample: "interface bond0 config updated"
 '''
 
 
