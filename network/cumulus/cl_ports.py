@@ -18,6 +18,7 @@
 DOCUMENTATION = '''
 ---
 module: cl_ports
+version_added: "2.1"
 author: "Cumulus Networks (@CumulusNetworks)"
 short_description: Configure Cumulus Switch port attributes (ports.conf)
 description:
@@ -59,6 +60,20 @@ attributes defined in the ports.conf file on Cumulus Linux
       notify: restart switchd
 
 '''
+
+RETURN = '''
+changed:
+    description: whether the interface was changed
+    returned: changed
+    type: bool
+    sample: True
+msg:
+    description: human-readable report of success or failure
+    returned: always
+    type: string
+    sample: "interface bond0 config updated"
+'''
+
 PORTS_CONF = '/etc/cumulus/ports.conf'
 
 
