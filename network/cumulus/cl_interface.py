@@ -18,6 +18,7 @@
 DOCUMENTATION = '''
 ---
 module: cl_interface
+version_added: "2.1"
 author: "Cumulus Networks (@CumulusNetworks)"
 short_description: Configures a front panel port, loopback or
                   management port on Cumulus Linux.
@@ -176,6 +177,19 @@ cl_interfaces:
         virtual_mac: '00:00:5E:00:10:10'
 
 
+'''
+
+RETURN = '''
+changed:
+    description: whether the interface was changed
+    returned: changed
+    type: bool
+    sample: True
+msg:
+    description: human-readable report of success or failure
+    returned: always
+    type: string
+    sample: "interface bond0 config updated"
 '''
 
 
