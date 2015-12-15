@@ -18,6 +18,7 @@
 DOCUMENTATION = '''
 ---
 module: cl_license
+version_added: "2.1"
 author: "Cumulus Networks (@CumulusNetworks)"
 short_description: Install Cumulus Linux license
 description:
@@ -80,6 +81,19 @@ ansible -m cl_license -a "src='http://10.1.1.1/new_lic' force=yes"  -u root all
 
 ----
 
+'''
+
+RETURN = '''
+changed:
+    description: whether the interface was changed
+    returned: changed
+    type: bool
+    sample: True
+msg:
+    description: human-readable report of success or failure
+    returned: always
+    type: string
+    sample: "interface bond0 config updated"
 '''
 
 CL_LICENSE_PATH='/usr/cumulus/bin/cl-license'
