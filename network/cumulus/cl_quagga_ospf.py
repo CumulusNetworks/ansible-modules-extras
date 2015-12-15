@@ -18,6 +18,7 @@
 DOCUMENTATION = '''
 ---
 module: cl_quagga_ospf
+version_added: "2.1"
 author: "Cumulus Networks (@CumulusNetworks)"
 short_description: Configure basic OSPFv2 parameters and interfaces using Quagga
 description:
@@ -96,6 +97,19 @@ Example playbook entries using the cl_quagga_ospf module
         with_sequence: start=1 end=5 format=swp%d
     - name: disable ospf on swp1
         cl_quagga_ospf: interface=swp1 state=absent
+'''
+
+RETURN = '''
+changed:
+    description: whether the interface was changed
+    returned: changed
+    type: bool
+    sample: True
+msg:
+    description: human-readable report of success or failure
+    returned: always
+    type: string
+    sample: "interface bond0 config updated"
 '''
 
 

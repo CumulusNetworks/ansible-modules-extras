@@ -18,6 +18,7 @@
 DOCUMENTATION = '''
 ---
 module: cl_prefix_check
+version_added: "2.1"
 author: "Cumulus Networks (@CumulusNetworks)"
 short_description: Check to see if route/prefix exists
 description:
@@ -85,6 +86,19 @@ exists
       cl_prefix_check: prefix=3.3.3.3 nonexthop=6.6.6.6
 
 
+'''
+
+RETURN = '''
+changed:
+    description: whether the interface was changed
+    returned: changed
+    type: bool
+    sample: True
+msg:
+    description: human-readable report of success or failure
+    returned: always
+    type: string
+    sample: "interface bond0 config updated"
 '''
 
 def run_cl_cmd(module, cmd, check_rc=True):

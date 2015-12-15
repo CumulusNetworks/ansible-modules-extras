@@ -18,6 +18,7 @@
 DOCUMENTATION = '''
 ---
 module: cl_quagga_protocol
+version_added: "2.1"
 author: "Cumulus Networks (@CumulusNetworks)"
 short_description: Enable routing protocol services via Quagga
 description:
@@ -76,6 +77,19 @@ Example playbook entries using the cl_quagga module
 
 - name: enable ospfv2 service and activate it
   cl_quagga_protocol name=ospfd state=present activate=yes
+'''
+
+RETURN = '''
+changed:
+    description: whether the interface was changed
+    returned: changed
+    type: bool
+    sample: True
+msg:
+    description: human-readable report of success or failure
+    returned: always
+    type: string
+    sample: "interface bond0 config updated"
 '''
 
 
